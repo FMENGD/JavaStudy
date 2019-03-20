@@ -1,0 +1,10 @@
+String 与 List<String> 的区别
+String[]数组里面是存放string型的值 为数组，定长，不可变；
+List<string>是存放string类型的对象  为泛型，非定常，可变
+数组的容量是固定的，只能一次获取或设置一个元素的值，而List<T>的容量可根据需要自动扩充、修改、删除或插入数据。
+数组可以具有多个维度，而 List< T> 始终只具有一个维度。
+string[]是定长的，不容易实现容量增长、中间插入一个字符串这样的操作，List<string>则可以方便实现。
+如果你能确定字符串数组长度，而且可以逐项填充的话，建议用string[]。
+如果不能确定数组长度，或者在计算值时需要不断向中间插入一个字符串，可以使用List<string>。
+生成完成后再用ToArray()方法转换为string[]，string[]也可以通过List的AddRange方法添加到List<string>
+
